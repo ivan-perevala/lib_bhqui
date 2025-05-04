@@ -91,17 +91,7 @@ class progress:
     def _func_draw_progress(self, context: Context):
         layout: UILayout = self.layout  # type: ignore
 
-        layout.use_property_split = True
-        layout.use_property_decorate = False
-
-        layout.template_input_status()
-        layout.separator_spacer()
-        layout.template_reports_banner()
-
-
         if hasattr(WindowManager, progress._attrname):
-            layout.separator_spacer()
-            layout.template_running_jobs()
             for item in progress.valid_progress_items():
                 row = layout.row(align=True)
 
@@ -120,13 +110,6 @@ class progress:
                         item.step += 1
                         if item.step >= 25:
                             item.step = 0
-
-        layout.separator_spacer()
-
-        row = layout.row()
-        row.alignment = 'RIGHT'
-
-        row.label(text=context.screen.statusbar_info())
 
     @classmethod
     def progress_items(cls) -> tuple[ProgressPropertyItem]:
@@ -162,7 +145,7 @@ class progress:
                     cls._attrname,
                     CollectionProperty(type=progress.ProgressPropertyItem, options={'HIDDEN'})
                 )
-                STATUSBAR_HT_header.draw = cls._func_draw_progress
+                STATUSBAR_HT_header.append(cls._func_draw_progress)
                 cls._update_statusbar()
 
             cls._is_drawn = True
@@ -190,7 +173,6 @@ class progress:
         Removes all progressbars and restores statusbar to original state.
         """
 
-        import importlib
         if not cls._is_drawn:
             return
 
@@ -198,8 +180,7 @@ class progress:
         delattr(WindowManager, cls._attrname)
         bpy.utils.unregister_class(progress.ProgressPropertyItem)
 
-        importlib.reload(space_statusbar)
-        STATUSBAR_HT_header.draw = space_statusbar.STATUSBAR_HT_header.draw
+        STATUSBAR_HT_header.remove(cls._func_draw_progress)
         cls._update_statusbar()
 
         cls._is_drawn = False
