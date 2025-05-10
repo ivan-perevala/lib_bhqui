@@ -29,19 +29,21 @@ def developer_extras_poll(context: Context) -> bool:
     return context.preferences.view.show_developer_ui
 
 
-def template_developer_extras_warning(context: Context, layout: UILayout) -> None:
+def template_developer_extras_warning(context: Context, layout: UILayout, text_ctxt: str = 'bqhui') -> None:
     """
     Template UI text which warns user about section which is intended for development purposes and also
     allows to disable developer extras.
 
     .. note::
 
-        `BHQAB_Preferences` used as message context in localization, so message can be translated.
+        `bqhui` used as message context in localization, so message can be translated.
 
     :param context: Current context.
     :type context: `Context`_
     :param layout: UI layout where warning should be displayed.
     :type layout: `UILayout`_
+    :param text_ctxt: Text translation context.
+    :type text_ctxt: str
     """
 
     if developer_extras_poll(context):
@@ -54,6 +56,6 @@ def template_developer_extras_warning(context: Context, layout: UILayout) -> Non
         text = "This section is intended for developers. You see it because " \
             "you have an active \"Developers Extras\" option in the Blender " \
             "user preferences."
-        draw_wrapped_text(context, scol, text=text, text_ctxt='BHQAB_Preferences')
+        draw_wrapped_text(context, scol, text=text, text_ctxt=text_ctxt)
 
         col.prop(context.preferences.view, "show_developer_ui")
