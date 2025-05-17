@@ -12,4 +12,4 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 See [./LICENSE](./LICENSE) file for license.
 
-© 202-2025 Ivan Perevala (ivan95perevala@gmail.com)
+© 2025 Ivan Perevala (ivan95perevala@gmail.com)
