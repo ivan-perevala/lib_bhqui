@@ -2,7 +2,7 @@
 
 ..  SPDX-License-Identifier: GPL-3.0-or-later
 
-BHQ UI components for Blender extensions
+UI components for Blender extensions
 ========================================
 
 .. toctree::
