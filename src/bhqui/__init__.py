@@ -20,8 +20,6 @@ if __debug__:
             importlib.reload(_icons_cache)
         if "_preset" in lc:
             importlib.reload(_preset)
-        if "_localization" in lc:
-            importlib.reload(_localization)
 
     __reload_submodules(locals())
     del __reload_submodules
@@ -40,7 +38,6 @@ from . _developer_extras import *
 from . _progress import *
 from . _icons_cache import *
 from . _preset import *
-from . _localization import *
 
 
 __all__ = (
@@ -64,8 +61,4 @@ __all__ = (
     # file://./_preset.py
     "copy_default_presets_from",
     "template_preset",
-
-    # file://./_localization.py
-    "update_localization",
-    "request_localization_from_file",
 )
