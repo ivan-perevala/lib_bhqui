@@ -6,7 +6,7 @@
 
 # ----------------------------------------------------------------------------------------------------------------------
 [project]
-version = "1.0.0"
+version = "4.2.0"
 name = "bhqui"
 description = "BHQ UI components for Blender extensions"
 authors = [{ name = "Ivan Perevala", email = "ivan95perevala@gmail.com" }]
@@ -39,7 +39,7 @@ where = ["src"]
 # Include LICENSE files as package data for project.
 # https://setuptools.pypa.io/en/latest/userguide/datafiles.html#package-data
 [tool.setuptools.package-data]
-"bhqui" = ["./LICENSE"]
+"bhqui4" = ["./LICENSE"]
 
 # ----------------------------------------------------------------------------------------------------------------------
 # MyPy configuration.

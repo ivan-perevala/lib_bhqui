@@ -5,5 +5,7 @@
 API Reference
 =============
 
-.. automodule:: bhqui
+.. automodule:: bhqui4
    :members:
+
+.. include:: ../links.inc
