@@ -30,7 +30,6 @@ from . import _developer_extras
 from . import _progress
 from . import _icons_cache
 from . import _preset
-from . import _localization
 
 from . _unique_name import *
 from . _wrapped_text import *
