@@ -17,7 +17,7 @@ __all__ = (
 
 def eval_text_pixel_dimensions(*, fontid: int = 0, text: str = "") -> Vector:
     """
-    Evaluates text dimensions in pixels as it would be desplayed in the UI.
+    Evaluates text dimensions in pixels as it would be displayed in the UI.
 
     :param fontid: Font identifier, default ``0``.
     :type fontid: int, optional

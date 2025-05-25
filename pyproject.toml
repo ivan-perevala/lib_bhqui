@@ -7,15 +7,16 @@
 # ----------------------------------------------------------------------------------------------------------------------
 [project]
 name = "bhqui"
-version = "4.2.0"
+version = "4.2.1"
 description = "UI components for Blender extensions"
 authors = [{ name = "Ivan Perevala", email = "ivan95perevala@gmail.com" }]
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
 ]
-license = "MIT"
+license = "GPL-3.0-or-later"
 license-files = ["LICENSE"]
 keywords = ["bpy", "ui"]
 
@@ -28,7 +29,7 @@ dynamic = ["optional-dependencies"]
 [project.urls]
 Homepage = "https://github.com/ivan-perevala/lib_bhqui"
 Issues = "https://github.com/ivan-perevala/lib_bhqui/issues"
-Documentation = "https://lib-bhqui.readthedocs.io/4.2.0/"
+Documentation = "https://lib-bhqui.readthedocs.io/4.2.1/"
 
 [tool.setuptools.dynamic]
 optional-dependencies = { docs = { file = [
@@ -109,3 +110,9 @@ pythonpath = ["./src"]
 
 #https://docs.pytest.org/en/stable/reference/reference.html#confval-testpaths
 testpaths = ["tests"]
+
+# https://github.com/codespell-project/codespell?tab=readme-ov-file#using-a-config-file
+[tool.codespell]
+skip = './build,./dist,./docs/_build'
+count = true
+quiet-level = 3
