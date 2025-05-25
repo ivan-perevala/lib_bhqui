@@ -4,6 +4,11 @@
 
 from __future__ import annotations
 
+"""This module is a collection of utility functionality for UI elements in the Blender extensions.
+It includes functions for unique naming, text wrapping, developer extras, progress handling,
+icon caching, and preset management.
+"""
+
 if __debug__:
     def __reload_submodules(lc):
         import importlib
