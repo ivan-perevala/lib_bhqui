@@ -20,4 +20,14 @@ This module is a collection of utility functionality for UI elements in the Blen
 It includes functions for unique naming, text wrapping, developer extras, progress handling,
 icon caching, and preset management.
 
+Links:
+
+* Documentation: [lib-bhqui.readthedocs.io/latest](https://lib-bhqui.readthedocs.io/latest/)
+
+* Project is [available on PyPI](https://pypi.org/project/bhqui/):
+
+    ```powershell
+    pip install bhqui
+    ```
+
 © 2025 Ivan Perevala (ivan95perevala@gmail.com)
